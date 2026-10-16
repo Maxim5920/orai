@@ -25,11 +25,41 @@
             }
         }
 
+        static void Csere()
+        {
+            Console.Write("Melyik törpöt cseréljük le?");
+            string nev = Console.ReadLine();
+
+            int index = 0;
+
+            while (index < torpok.Length && torpok[index] != nev)
+            {
+                index++;
+
+            }
+            if (index < torpok.Length)
+            {
+                torpok[index] = nev;
+                Console.Write("Melyik törpre cseréljül le?");
+                string ujNev = Console.ReadLine();
+                torpok[index] = ujNev;
+                Console.WriteLine("Lecserélve");
+            }
+            else
+            {
+                Console.WriteLine("Nincs ilyen törp!");
+            }
+
+        }
+
+
 
 
         static void Main(string[] args)
         {
             TorpokLetrehozas();
+            TorpokKiirasa();
+            Csere();
             TorpokKiirasa();
         }
     }
