@@ -2,7 +2,7 @@
 {
     internal class Program
     {
-
+        static string[] torpok = new string[7];
 
 
 
